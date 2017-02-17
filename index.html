@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WWTBAM</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="btn btn-primary btn-lg btn-block" onclick="intro_snd.play();intro_snd.fade(0, 1, 10000)">INTRO</div>
+            </div>
+            <div class="col-md-4">
+                <div class="btn btn-primary btn-lg btn-block" onclick="end_snd.play()">END</div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="input-group input-group-lg">
+                    <input type="number" class="form-control" id="level_value" step=1 value=1 onchange="set_level(this)"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary btn-block" onclick="toggle_loop()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOOP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+            <div class="col-md-4">
+                <div class="btn btn-primary btn-lg btn-block" onclick="next_level()">NEXT LEVEL</div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-2">
+                <div class="btn btn-primary btn-lg btn-block" onclick="lifeline_loop(audience_snd, this)">AUDIENCE</div>
+            </div>
+            <div class="col-md-2">
+                <div class="btn btn-primary btn-lg btn-block" onclick="lifeline_loop(phone_snd, this)">PHONE</div>
+            </div>
+            <div class="col-md-2">
+                <div class="btn btn-primary btn-lg btn-block" onclick="fifty_snd.play()">50/50</div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="btn btn-primary btn-lg btn-block" onclick="next_question()">NEXT QUESTION</div>
+            </div>
+            <div class="col-md-4">
+                <div class="btn btn-primary btn-lg btn-block" id="lock_in" onclick="lock_in()">LOCK IN</div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 hidden" id="outcome">
+                <div class="btn btn-success btn-lg btn-block" id="right" onclick="answer_right()">RIGHT</div>
+                <div class="btn btn-danger btn-lg btn-block" id="wrong" onclick="answer_wrong()">WRONG</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/howler.core.min.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="js/funcs.js"></script>
+  </body>
+</html>
