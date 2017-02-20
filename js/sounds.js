@@ -77,6 +77,11 @@ var to_level_4_snd = new Howl({
   }
 });
 
+var wrong_snd = new Howl({
+    src: ['sounds/wrong.mp3'],
+    volume: 1
+});
+
 var lvl1_correct_snd = new Howl({
   src: ['sounds/lvl1_correct.mp3'],
   volume: 1,

@@ -24,16 +24,16 @@
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
         <div class="row">
-            <div class="col-md-offset-2 col-md-4">
+            <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-6">
                 <div class="btn btn-primary btn-lg btn-block" onclick="intro_snd.play();intro_snd.fade(0, 1, 10000)">INTRO</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="btn btn-primary btn-lg btn-block" onclick="end_snd.play()">END</div>
             </div>
         </div>
         <div class="row">&nbsp;</div>
         <div class="row">
-            <div class="col-md-offset-2 col-md-4">
+            <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-6">
                 <div class="input-group input-group-lg">
                     <input type="number" class="form-control" id="level_value" step=1 value=1 onchange="set_level(this)"/>
                     <span class="input-group-btn">
@@ -41,34 +41,34 @@
                     </span>
                 </div><!-- /input-group -->
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="btn btn-primary btn-lg btn-block" onclick="next_level()">NEXT LEVEL</div>
             </div>
         </div>
         <div class="row">&nbsp;</div>
         <div class="row">
-            <div class="col-md-offset-3 col-md-2">
+            <div class="col-md-offset-3 col-md-2 col-sm-4 col-xs-4">
                 <div class="btn btn-primary btn-lg btn-block" onclick="lifeline_loop(audience_snd, this)">AUDIENCE</div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4 col-xs-4">
                 <div class="btn btn-primary btn-lg btn-block" onclick="lifeline_loop(phone_snd, this)">PHONE</div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4 col-xs-4">
                 <div class="btn btn-primary btn-lg btn-block" onclick="fifty_snd.play()">50/50</div>
             </div>
         </div>
         <div class="row">&nbsp;</div>
         <div class="row">
-            <div class="col-md-offset-2 col-md-4">
+            <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-6">
                 <div class="btn btn-primary btn-lg btn-block" onclick="next_question()">NEXT QUESTION</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-xs-6">
                 <div class="btn btn-primary btn-lg btn-block" id="lock_in" onclick="lock_in()">LOCK IN</div>
             </div>
         </div>
         <div class="row">&nbsp;</div>
         <div class="row">
-            <div class="col-md-offset-4 col-md-4 hidden" id="outcome">
+            <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-xs-offset-3 col-sm-6 col-xs-6 hidden" id="outcome">
                 <div class="btn btn-success btn-lg btn-block" id="right" onclick="answer_right()">RIGHT</div>
                 <div class="btn btn-danger btn-lg btn-block" id="wrong" onclick="answer_wrong()">WRONG</div>
             </div>

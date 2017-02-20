@@ -103,6 +103,11 @@ function answer_right() {
     }
 }
 
+function answer_wrong() {
+    lock_in()
+    wrong_snd.play()
+}
+
 var lifeline_active = false
 var lifeline_snd = undefined
 
